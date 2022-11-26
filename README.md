@@ -1,4 +1,4 @@
-# Download this repo with `git clone https://github.com/Alpisc/Selfbot`
+## Download this repo with `git clone https://github.com/Alpisc/Selfbot`
 
 ## Install requirements with `get-reqs.bat`
 ## If this is your first time using the bot, please consider running `setup.bat` to adjust the selfbot settings
