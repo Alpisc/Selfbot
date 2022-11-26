@@ -19,6 +19,7 @@ animegirl = input("Do you want to enable a animegirl console ascii art (y/N):\n"
 
 animegirl2 = input("Do you want to enable a animegirl2 console ascii art (y/N):\n").lower().strip('"')
 
+tenorpos = ""
 if tenorapikey != "":
     tenorpos = input("Do you want to use a tenor api pos argument? (leave blank if you dont know what this is):\n")
 
@@ -54,7 +55,7 @@ old_dict["TENORAPIKEY"] = tenorapikey
 old_dict["GALAXY"] = galaxy
 old_dict["ANIMEGIRL"] = animegirl
 old_dict["ANIMEGIRL2"] = animegirl2
-old_dict["TENORPOS"] = tenorpos
+old_dict["TENORPOS"] = "" if tenorpos == "" else tenorpos
 
 json_object = json.dumps(old_dict, indent=4)
 
