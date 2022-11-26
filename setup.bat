@@ -1,1 +1,1 @@
-cd .content && python3 ".content/setup_wizard.py"
+cd .content && python3 setup_wizard.py

@@ -1,1 +1,1 @@
-cd .content && python3 ".content/selfbot.py"
+cd .content && python3 selfbot.py
