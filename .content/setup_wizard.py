@@ -5,11 +5,13 @@ print("Welcome to the installation wizard, please fill out all of the fields to 
 
 token = input("Your discord token:\n").strip('"')
 
-prefix = input("What prefix do you want to use:\n").strip('"')
+prefix = ""
+while prefix == "":
+    prefix = input("What prefix do you want to use:\n").strip('"')
 
 status = input("Which discord status do you want (Online/Idle/Dnd/Invisible/Offline):\n").lower().strip('"')
 
-tenorapikey = input("Enter your Tenor API key:\n").strip('"')
+tenorapikey = input("Enter your Tenor API key: (not needed)\n").strip('"')
 
 galaxy = input("Do you want to enable a galaxy console ascii art (y/N):\n").lower().strip('"')
 
@@ -17,7 +19,8 @@ animegirl = input("Do you want to enable a animegirl console ascii art (y/N):\n"
 
 animegirl2 = input("Do you want to enable a animegirl2 console ascii art (y/N):\n").lower().strip('"')
 
-tenorpos = input("Do you want to use a tenor api pos argument? (leave blank if you dont know what this is):\n")
+if tenorapikey != "":
+    tenorpos = input("Do you want to use a tenor api pos argument? (leave blank if you dont know what this is):\n")
 
 if(status not in ["online","idle","dnd","do not disturb", "invisible", "offline"]):
     print("Invalid status detected, please either run the setup again or change it in the config file")

@@ -1,1 +1,0 @@
-python selfbot.py
