@@ -1,0 +1,5 @@
+wheel
+discord.py-self
+requests
+colorama
+gitpython
