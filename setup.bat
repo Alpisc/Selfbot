@@ -1,1 +1,1 @@
-python3 .content/setup_wizward.bat
+python3 .content/setup_wizward.py
