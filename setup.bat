@@ -1,1 +1,1 @@
-python3 "".content/setup_wizward.py"
+python3 ".content/setup_wizward.py"

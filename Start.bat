@@ -1,1 +1,1 @@
-python3 "".content/selfbot.py"
+python3 ".content/selfbot.py"
