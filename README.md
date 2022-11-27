@@ -1,11 +1,20 @@
-## Download this repo with `git clone https://github.com/Alpisc/Selfbot`
+# Installation
 
-## Install requirements with `get-reqs.bat`
-## If this is your first time using the bot, please consider running `setup.bat` to adjust the selfbot settings
-## (If the Bot tells you that your config corrupted, worry not. This is likely because of a new update. Either re run `setup.bat` or add the config entry manually in `.content/config.json` (the `.content/template_config.json` always contains all needed fields))
+## Cloning the Repo
+Clone the repo by executing `git clone https://github.com/Alpisc/Selfbot`
 
-all commands can be viewed with {prefix}cmds
+## Installing dependencies
+Run `get-reqs.bat` to install all needed dependencies
 
-## Please start the Bot from cmd instead of double clicking `Start.bat` (some commands behave weird if you don't)
+## Setup
+Run the `setup.bat` file to configure the selfbots config
 
-have fun using it
+# Usage
+
+## Start
+Simply execute the `Start.bat` file
+
+# Extra
+
+## Config
+If you need to reconfigure the config, either run `setup.bat` or manually edit the config at `.config/config.json`
