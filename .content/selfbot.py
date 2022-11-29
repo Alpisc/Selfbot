@@ -730,7 +730,11 @@ async def viewconfig(ctx, show_token: typing.Optional[str] = ""):
 
 
 @client.command(alias=["print"])
-async def printtocmd(ctx, text: str):
+async def printtocmd(ctx, *, text: str):
     print(text + "\n")
+
+@client.command()
+async def shutdown(ctx):
+    sys.exit()
 
 client.run(TOKEN)
