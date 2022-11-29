@@ -17,7 +17,7 @@ from urllib.request import urlopen, Request
 def reloadConfig():
     global config, TOKEN, PREFIX, GALAXY, ANIMEGIRL, ANIMEGIRL2, STATUS, TENORAPIKEY, TENORPOS
     try:
-        config = json.load(open("config.json"))
+        config = json.load(open(".content/config.json"))
         TOKEN =  config["TOKEN"]
         PREFIX = config['PREFIX']
         GALAXY = config['GALAXY']
@@ -30,8 +30,8 @@ def reloadConfig():
         print("Your config file is corrupted, please either run the setup wizard or fill out empty fields by your self.\n")
         flush_config = input("Do you want to reset your config.json file? (y/N):\n")
         if(flush_config.lower() in ["y","ye","yes"]):
-            if os.path.exists("template_config.json"):
-                with open('template_config.json', 'r') as openfile:
+            if os.path.exists(".content/template_config.json"):
+                with open('.content/template_config.json', 'r') as openfile:
                     old_dict = json.load(openfile)
             else:
                 old_dict = {
@@ -47,11 +47,12 @@ def reloadConfig():
             }
             json_object = json.dumps(old_dict, indent=4)
 
-            with open("config.json", "w") as outfile:
+            with open(".content/config.json", "w") as outfile:
                 outfile.write(json_object)
 
             print("Your config has been flushed!\nPlease go ahead by yourself now!")
             sys.exit()
+        reloadConfig()
 
 reloadConfig()
 
@@ -173,7 +174,7 @@ async def setStatus(STATUS):
 
         json_object = json.dumps(config, indent=4)
 
-        with open("config.json", "w") as outfile:
+        with open(".content/config.json", "w") as outfile:
             outfile.write(json_object)
 
         reloadConfig()
@@ -624,7 +625,7 @@ async def animegifpfpgen(ctx):
 
         json_object = json.dumps(config, indent=4)
 
-        with open("config.json", "w") as outfile:
+        with open(".content/config.json", "w") as outfile:
             outfile.write(json_object)
 
         reloadConfig()
@@ -648,7 +649,7 @@ async def setprefix(ctx, new_prefix: str):
 
     json_object = json.dumps(config, indent=4)
 
-    with open("config.json", "w") as outfile:
+    with open(".content/config.json", "w") as outfile:
         outfile.write(json_object)
 
     reloadConfig()
@@ -663,7 +664,7 @@ async def settenorapi(ctx, key: str):
 
     json_object = json.dumps(config, indent=4)
 
-    with open("config.json", "w") as outfile:
+    with open(".content/config.json", "w") as outfile:
         outfile.write(json_object)
 
     reloadConfig()
@@ -705,7 +706,7 @@ async def applyconfig(ctx, number: int):
 
     json_object = json.dumps(json.load(open(f'configbackups/backup_{number}.json', 'r')), indent=4)
 
-    with open("config.json", "w") as outfile:
+    with open(".content/config.json", "w") as outfile:
         outfile.write(json_object)
 
     reloadConfig()
@@ -717,7 +718,7 @@ async def applyconfig(ctx, number: int):
 @client.command()
 async def viewconfig(ctx, show_token: typing.Optional[str] = ""):
     """sends the entire config except the token if send_token is not yes"""
-    with open('config.json', 'r') as openfile:
+    with open('.content/config.json', 'r') as openfile:
         config = json.load(openfile)
 
     if (show_token.lower() not in ["y", "ye", "yes"]):

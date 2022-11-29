@@ -32,8 +32,8 @@ animegirl = animegirl == "y"
 
 animegirl2 = animegirl2 == "y"
 
-if exists("template_config.json"):
-    with open('template_config.json', 'r') as openfile:
+if exists(".content/template_config.json"):
+    with open('.content/template_config.json', 'r') as openfile:
         old_dict = json.load(openfile)
 else:
     old_dict = {
@@ -59,5 +59,5 @@ old_dict["TENORPOS"] = "" if tenorpos == "" else tenorpos
 
 json_object = json.dumps(old_dict, indent=4)
 
-with open("config.json", "w") as outfile:
+with open(".content/config.json", "w") as outfile:
     outfile.write(json_object)
