@@ -29,6 +29,11 @@ if %selection% NEQ 1 (
 if %selection% EQU 1 (
     echo Starting Selfbot ...
     python3 .content/selfbot.py
+    echo:
+    echo Selfbot stopped!
+    pause
+    cls
+    goto :A
 ) else (
     if %selection% EQU 2 (
         echo Pulling newest version ...
