@@ -32,12 +32,14 @@ if %selection% == 1 (
         python3 .content/setup_wizard.py
         echo Setup finished
         pause
+        goto :A
     ) else (
         if %selection% == 3 (
             echo Installing dependencies
             pip install -r .content/requirements.txt
             echo Finished installing dependencies
             pause
+            goto :A
         ) else (
             if %selection% == 4 (
                 echo Exiting ...
