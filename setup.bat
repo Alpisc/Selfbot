@@ -1,1 +1,0 @@
-cd .content && python3 setup_wizard.py

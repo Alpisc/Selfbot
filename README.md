@@ -4,17 +4,17 @@
 Clone the repo by executing `git clone https://github.com/Alpisc/Selfbot`
 
 ## Installing dependencies
-Run `get-reqs.bat` to install all needed dependencies
+Start the `Menu.bat` file and select the 3rd option by typing 3
 
 ## Setup
-Run the `setup.bat` file to configure the selfbots config
+Start the `Menu.bat` file and select the 2nd option by typing 2
 
 # Usage
 
 ## Start
-Simply execute the `Start.bat` file
+Start the `Menu.bat` file and select the nd option by typing 1
 
 # Extra
 
 ## Config
-If you need to reconfigure the config, either run `setup.bat` or manually edit the config at `.config/config.json`
+If you need to reconfigure the config, either run `Menu.bat` or manually edit the config at `.config/config.json`
