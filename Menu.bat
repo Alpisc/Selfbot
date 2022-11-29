@@ -23,25 +23,29 @@ if %selection% NEQ 1 (
     )
 )
 
-if %selection% == 1 (
+if %selection% EQU 1 (
     echo Starting Selfbot ...
     python3 .content/selfbot.py
 ) else (
-    if %selection% == 2 (
+    if %selection% EQU 2 (
         echo Starting Setup
         python3 .content/setup_wizard.py
+        echo:
         echo Setup finished
         pause
+        cls
         goto :A
     ) else (
-        if %selection% == 3 (
+        if %selection% EQU 3 (
             echo Installing dependencies
             pip install -r .content/requirements.txt
+            echo:
             echo Finished installing dependencies
             pause
+            cls
             goto :A
         ) else (
-            if %selection% == 4 (
+            if %selection% EQU 4 (
                 echo Exiting ...
                 exit
             )
