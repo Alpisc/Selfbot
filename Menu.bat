@@ -1,4 +1,5 @@
 @echo off
+
 :A
 echo Selection.
 echo:
@@ -34,41 +35,41 @@ if %selection% EQU 1 (
     pause
     cls
     goto :A
-) else (
-    if %selection% EQU 2 (
-        echo Pulling newest version ...
-        git pull
-        echo:
-        echo Finished
-        pause
-        cls
-        goto :A
-    ) else (
-        if %selection% EQU 3 (
-            echo Starting Setup
-            python3 .content/setup_wizard.py
-            echo:
-            echo Setup finished
-            pause
-            cls
-            goto :A
-        ) else (
-            if %selection% EQU 4 (
-                echo Installing dependencies
-                pip install -r .content/requirements.txt
-                echo:
-                echo Finished installing dependencies
-                pause
-                cls
-                goto :A
-            ) else (
-                if %selection% EQU 5 (
-                    echo Exiting ...
-                    exit
-                )
-            )
-        )
-    )
+)
+
+if %selection% EQU 2 (
+    echo Pulling newest version ...
+    git pull
+    echo:
+    echo Finished
+    pause
+    cls
+    goto :A
+)
+
+if %selection% EQU 3 (
+    echo Starting Setup
+    python3 .content/setup_wizard.py
+    echo:
+    echo Setup finished
+    pause
+    cls
+    goto :A
+)
+
+if %selection% EQU 4 (
+    echo Installing dependencies
+    pip install -r .content/requirements.txt
+    echo:
+    echo Finished installing dependencies
+    pause
+    cls
+    goto :A
+)
+
+if %selection% EQU 5 (
+    echo Exiting ...
+    exit
 )
 
 pause
