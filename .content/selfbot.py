@@ -90,7 +90,7 @@ def CreateStartScreen():
     ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
     ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
     ⠀⠀⠀⠀⠀⠀⠀⠀⢀⠀⠀⡀⠀⠀⠀⡀⠀⠀⡀⠀⠀⠀⠀⠀⠀⢀⠀⠀⠀⠀⠀⢀⠀⢀⠀⠀⡀⠀⠀⠀⠀⠀⠀⠀
-    ⠀⠀⠀⠀⠀⠀⠀⠘⠛⠛⠞⠛⠿⠟⢛⠛⠿⠻⠛⠐⠟⠟⠛⠂⠀⠈⠈⠃⠄⠈⠓⠚⠛⠚⠓⠓⠟⠀⠀⠀⠀⠀⠀⠀{Fore.RESET}"""
+    ⠀⠀⠀⠀⠀⠀⠀⠘⠛⠛⠞⠛⠿⠟⢛⠛⠿⠻⠛⠐⠟⠟⠛⠂⠀⠈⠈⠃⠄⠈⠓⠚⠛⠚⠓⠓⠟⠀⠀⠀⠀⠀⠀⠀{Fore.RESET}\n"""
     if ANIMEGIRL:
         startscreen += """⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
     ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠈⠛⠻⢷⣦⡄⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
@@ -124,7 +124,7 @@ def CreateStartScreen():
     ⠀⠀⠀⠀⠀⠀⠀⠀⢸⣿⣿⡿⠛⠁⠀⠀⠀⠉⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠙⣿⣿⣿⣿⣿⣿⡏⢸⣿⡿⠀⠀
     ⠀⠀⠀⠀⠀⠀⠀⠀⠘⢿⣿⠁⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠈⢻⡉⠉⠉⠉⠀⠈⠉⠀⠀⠀
     ⠀⠀⠀⠀⠀⠀⠀⠀⠀⣸⠃⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢳⠀⠀⠀⠀⠀⠀⠀⠀⠀
-    ⠀⠀⠀⠀⠀⠀⠀⠀⢰⡏⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠈⣷⠀⠀⠀"""
+    ⠀⠀⠀⠀⠀⠀⠀⠀⢰⡏⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠈⣷⠀⠀⠀\n"""
     if ANIMEGIRL2:
         startscreen += """
     ⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿
@@ -141,8 +141,8 @@ def CreateStartScreen():
     ⣿⣿⣿⠀⠀⢸⣿⣿⣷⢠⠀⣿⣿⣶⣶⣶⡶⠟⠋⠘⡻⣿⣷⣳⣿⡄⠀⠀⣿⣿
     ⣿⣿⣿⠀⠀⠀⣿⣿⣿⡌⡆⢿⣿⣿⣽⣾⠀⠀⠀⣰⣿⣷⣾⣯⣿⡃⠀⠀⢻⣿
     ⣿⣿⡏⠀⠀⠀⢹⣿⣿⣷⣸⣼⣿⣿⣿⣿⣿⣷⣾⣿⣿⣿⣿⣿⣷⡇⠀⠀⢸⣿
-    ⣿⣿⡇⡄⠀⠀⢸⣿⣿⣽⣿⣿⣏⠻⣿⣿⣿⠿⠛⠉⣉⣰⣿⣿⣿⣧⠀⠀⢸⣿"""
-    startscreen += f"\nBot started\nWelcome back {client.user.name}\nYour Prefix is: {PREFIX}\nYour Status is: {''.join(str(x + ' ') for x in [word.capitalize() for word in STATUS.split(' ')])}\n"
+    ⣿⣿⡇⡄⠀⠀⢸⣿⣿⣽⣿⣿⣏⠻⣿⣿⣿⠿⠛⠉⣉⣰⣿⣿⣿⣧⠀⠀⢸⣿\n"""
+    startscreen += f"Bot started\nWelcome back {client.user.name}\nYour Prefix is: {PREFIX}\nYour Status is: {''.join(str(x + ' ') for x in [word.capitalize() for word in STATUS.split(' ')])}\n"
     print(startscreen)
 
 errorvar = "No errors yet :D"
@@ -179,7 +179,7 @@ async def setStatus(STATUS):
 
         reloadConfig()
 
-os.system("cls" if os.name == "nt" else "clear")
+# os.system("cls" if os.name == "nt" else "clear")
 print("Starting up, this might take a few seconds...")
 @client.event
 async def on_connect():

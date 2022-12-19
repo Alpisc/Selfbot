@@ -1,4 +1,5 @@
-@echo off
+echo off
+cls
 
 :A
 echo Selection.
@@ -27,9 +28,18 @@ if %selection% NEQ 1 (
     )
 )
 
+set result=false
+if %selection% == 1 set result=true
+if %selection% == 3 set result=true
+if "%result%" == "true" (
+    cls
+    set /p pychoice=Please provide your CMD Python activation phrase: 
+    echo:
+)
+
 if %selection% EQU 1 (
     echo Starting Selfbot ...
-    python3 .content/selfbot.py
+    %pychoice% .content/selfbot.py
     echo:
     echo Selfbot stopped!
     pause
@@ -49,7 +59,7 @@ if %selection% EQU 2 (
 
 if %selection% EQU 3 (
     echo Starting Setup
-    python3 .content/setup_wizard.py
+    %pychoice% .content/setup_wizard.py
     echo:
     echo Setup finished
     pause
