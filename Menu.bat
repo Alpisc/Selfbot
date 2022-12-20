@@ -32,6 +32,7 @@ if exist .content/pypath.txt (
     set /P pypath=<.content/pypath.txt
 ) else (
     where py > .content/pypath.txt
+    set /P pypath=<.content/pypath.txt
 )
 
 if %selection% EQU 1 (
