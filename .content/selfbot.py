@@ -642,6 +642,28 @@ async def animegifpfpgen(ctx):
     else:
         await ctx.message.edit("An error occured")
 
+@client.command()
+async def animegif(ctx, *, category: str = "anime"):
+    """sends a random anime gif"""
+    # https://tenor.com/developer/dashboard
+    r = requests.get("https://tenor.googleapis.com/v2/search?q=%s&key=%s&random=true&limit=1&pos=%s" % (category, TENORAPIKEY, TENORPOS), stream=True)
+
+    if r.status_code == 200:
+        result = json.loads(r.content)
+
+        config["TENORPOS"] = result['next']
+
+        json_object = json.dumps(config, indent=4)
+
+        with open(".content/config.json", "w") as outfile:
+            outfile.write(json_object)
+
+        reloadConfig()
+
+        await ctx.send(content=result["results"][0]["media_formats"]["gif"]["url"])
+    else:
+        await ctx.send("An error occured")
+
 @client.command(alias=["changeprefix"])
 async def setprefix(ctx, new_prefix: str):
     """changes the current prefix"""
