@@ -749,4 +749,11 @@ async def printtocmd(ctx, *, text: str):
 async def shutdown(ctx):
     sys.exit()
 
+@client.command()
+async def spam(ctx, amount: int, *, message: str):
+    for i in range(amount):
+        await ctx.send(message)
+
+    print(f"Wrote {amount} times \"{message}\"")
+
 client.run(TOKEN)
