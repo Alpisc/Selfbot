@@ -207,10 +207,6 @@ snipes = {}
 
 def snipe_filter(message):
     if message.author == client.user:
-        if message.content == "https://tenor.com/view/thumbs-up-chew-eating-chika-fujiwara-kaguya-sama-gif-17941452":
-            return False
-        if message.content == "i finished master UwU":
-            return False
         if message.content == "no more messages to be sniped":
             return False
         #could make this better but it's easier to read like this atm
@@ -258,12 +254,6 @@ async def delete(ctx, amount: int):
             await mss.delete()
 
     print(f"Deleted {original_amount} messages")
-
-    a = await ctx.send("i finished master UwU")
-    b = await ctx.send("https://tenor.com/view/thumbs-up-chew-eating-chika-fujiwara-kaguya-sama-gif-17941452")
-    await asyncio.sleep(5)
-    await a.delete()
-    await b.delete()
 
 @client.command(aliases=["av"])
 async def profile(ctx, member: discord.Member = None):
