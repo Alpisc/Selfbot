@@ -10,19 +10,15 @@ Start the `Menu.bat` file and select the 3rd option by typing 3
 
 ## Setup
 
-Start the `Menu.bat` file and select the 2nd option by typing 2 (Look at Usage Additions)
+Start the `Menu.bat` file and select the 2nd option by typing 2
 
 # Usage
 
 ## Start
 
-Start the `Menu.bat` file and select the 1st option by typing 1 (Look at Usage Additions)
+Start the `Menu.bat` file and select the 1st option by typing 1
 
 # Extra
-
-## Usage Additions
-
-When choosing option 1 or 3, you need to specify how your python is accessed in your cmd (for example: `py`, `pypy`, `python` or `python3`)
 
 ## Config
 

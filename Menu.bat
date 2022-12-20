@@ -28,18 +28,15 @@ if %selection% NEQ 1 (
     )
 )
 
-set result=false
-if %selection% == 1 set result=true
-if %selection% == 3 set result=true
-if "%result%" == "true" (
-    cls
-    set /p pychoice=Please provide your CMD Python activation phrase: 
-    echo:
+if exist .content/pypath.txt (
+    set /P pypath=<.content/pypath.txt
+) else (
+    where py > .content/pypath.txt
 )
 
 if %selection% EQU 1 (
     echo Starting Selfbot ...
-    %pychoice% .content/selfbot.py
+    %pypath% .content/selfbot.py
     echo:
     echo Selfbot stopped!
     pause
@@ -59,7 +56,7 @@ if %selection% EQU 2 (
 
 if %selection% EQU 3 (
     echo Starting Setup
-    %pychoice% .content/setup_wizard.py
+    %pypath% .content/setup_wizard.py
     echo:
     echo Setup finished
     pause
