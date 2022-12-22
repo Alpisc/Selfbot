@@ -142,7 +142,7 @@ def CreateStartScreen():
     ⣿⣿⣿⠀⠀⠀⣿⣿⣿⡌⡆⢿⣿⣿⣽⣾⠀⠀⠀⣰⣿⣷⣾⣯⣿⡃⠀⠀⢻⣿
     ⣿⣿⡏⠀⠀⠀⢹⣿⣿⣷⣸⣼⣿⣿⣿⣿⣿⣷⣾⣿⣿⣿⣿⣿⣷⡇⠀⠀⢸⣿
     ⣿⣿⡇⡄⠀⠀⢸⣿⣿⣽⣿⣿⣏⠻⣿⣿⣿⠿⠛⠉⣉⣰⣿⣿⣿⣧⠀⠀⢸⣿\n"""
-    startscreen += f"Bot started\nWelcome back {client.user.name}\nYour Prefix is: {PREFIX}\nYour Status is: {''.join(str(x + ' ') for x in [word.capitalize() for word in STATUS.split(' ')])}\n"
+    startscreen += f"Bot started\nWelcome back {client.user.name}\nYour Prefix is: {PREFIX}\nYour Status is: {''.join(str(x + ' ') for x in [word.capitalize() for word in STATUS.split(' ')])}\nYou are Member of {len(client.guilds)} Guilds\n"
     print(startscreen)
 
 errorvar = "No errors yet :D"
