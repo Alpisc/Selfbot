@@ -160,15 +160,17 @@ async def setStatus(STATUS):
     if STATUS.upper() == "ONLINE":
         await client.change_presence(status=discord.Status.online)
         STATUS = "online"
-    elif(STATUS.upper() == "DND" or STATUS.upper() == "DO NOT DISTURB"):
+    elif(STATUS.upper() in ["DND", "DO NOT DISTURB"]):
         await client.change_presence(status=discord.Status.dnd)
         STATUS = "do not disturb"
     elif STATUS.upper() == "IDLE":
         await client.change_presence(status=discord.Status.idle)
         STATUS = "idle"
-    elif STATUS.upper() == "INVISIBLE":
+    elif STATUS.upper() in ["INVISIBLE", "OFFLINE"]:
         await client.change_presence(status=discord.Status.invisible)
         STATUS = "invisible"
+    else: 
+        return "Invalid Status"
     if(STATUS != config["STATUS"] and STATUS in ["online", "do not disturb", "idle", "invisible"]):
         config["STATUS"] = STATUS
 
@@ -178,6 +180,7 @@ async def setStatus(STATUS):
             outfile.write(json_object)
 
         reloadConfig()
+        return "Status set to " + STATUS
 
 # os.system("cls" if os.name == "nt" else "clear")
 print("Starting up, this might take a few seconds...")
@@ -755,5 +758,9 @@ async def spam(ctx, amount: int, *, message: str):
         await ctx.send(message)
 
     print(f"Wrote {amount} times \"{message}\"")
+
+@client.command()
+async def status(ctx, *, statusvar: str):
+    print(await setStatus(statusvar))
 
 client.run(TOKEN)
