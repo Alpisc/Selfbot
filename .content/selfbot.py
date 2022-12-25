@@ -180,7 +180,6 @@ async def setStatus(STATUS):
             outfile.write(json_object)
 
         reloadConfig()
-        return "Status set to " + STATUS
 
 # os.system("cls" if os.name == "nt" else "clear")
 print("Starting up, this might take a few seconds...")
@@ -762,5 +761,6 @@ async def spam(ctx, amount: int, *, message: str):
 @client.command()
 async def status(ctx, *, statusvar: str):
     print(await setStatus(statusvar))
+    CreateStartScreen()
 
 client.run(TOKEN)
