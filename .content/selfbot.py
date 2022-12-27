@@ -223,6 +223,14 @@ async def on_message_delete(message):
     if((message.author != client.user or (not message.content.startswith(PREFIX))) and snipe_filter(message)): #thanks for making commands auto delete ╰（‵□′）╯
         snipes[message.channel.id].append(message)
 
+@client.event
+async def on_guild_join(guild):
+    CreateStartScreen()
+
+@client.event
+async def on_guild_remove(guild):
+    CreateStartScreen()
+
 @client.command()
 async def snipe(ctx, count: typing.Optional[int]=1):
     """Shows you the most recently deleted message"""
