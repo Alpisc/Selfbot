@@ -3,7 +3,7 @@ from os.path import exists
 
 print("Welcome to the installation wizard, please fill out all of the fields to set up the selfbot")
 
-token = input("Your discord token:\n").strip('"')
+token = input("Your discord token:\n").strip('"').strip("'")
 
 prefix = ""
 while prefix == "":
