@@ -446,7 +446,7 @@ async def coinflip(ctx):
 async def uptime(ctx):
     """shows how long the bot is running"""
     time_now = datetime.datetime.now()
-    await ctx.send(f'My uptme is {time_now - start_time}')
+    await ctx.send(f'My uptime is {time_now - start_time}')
 
 @client.command(aliases=["reboot"])
 async def restart(ctx):
